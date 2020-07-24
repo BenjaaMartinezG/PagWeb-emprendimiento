@@ -15,6 +15,13 @@ app.set('views', path.join(__dirname, './views'));
 //cargar carpeta estatica public
 app.use(express.static('public'));
 
+//mostando fecha actual
+app.use((req, res, next) => {
+    const fecha = new Date();
+    res.locals.fechaActual = fecha.toLocaleDateString();
+    return next();
+})
+
 //cargar rutas
 app.use('/', routes());
 
