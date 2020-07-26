@@ -1,3 +1,26 @@
 extends ../layout/index
 block contenido
-    h1 Nosotros
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src="img/Alfajores B al Cuadrado.jpg", alt="Imagen de Nosotros", class="img-fluid")
+            .col-md-7
+                h1 #{pagina}
+                blockquote TEXTO DE PRUEBA! ... El texto narrativo es aquel que relata eventos, historias, cuentos, hechos o mitos, por lo que puede ser ficticio o no ficticio. Se caracteriza por una secuencia de eventos expresados por verbos dinámicos y adverbios y conectores espaciales como: "y luego", "primero", "segundo", "tercero"... Por ejemplo: “Primero llenamos nuestras maletas y luego subimos en un taxi y fuimos camino al aeropuerto. Después de eso…”.
+                p Este tipo de texto, llamado texto descriptivo, tiene como finalidad definición de algo, ya sea un objeto, una persona, un animal, una situación o una descripción de otro tipo de texto. También se emplea para expresar sentimientos. El texto suele girar en torno a los atributos de una cosa y suele emplear las formas del pronombre de la tercera persona.
+                
+    .listado-iconos
+        .row
+            .col-md-4
+                img(src="img/", class="img-fluid mb-4")
+                h2.mb-4 Primero
+                p Introducir aqui TEXTO DESCRIPTIVO
+            .col-md-4
+                img(src="img/icono_precios.svg", class="img-fluid mb-4")
+                h2.mb-4 Mejores Precios
+                p Introducir aqui TEXTO DESCRIPTIVO
+            .col-md-4
+                img(src="img/", class="img-fluid mb-4")
+                h2.mb-4 Tercero
+                p Introducir aqui TEXTO DESCRIPTIVO
+            
