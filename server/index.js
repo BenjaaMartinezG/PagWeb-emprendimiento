@@ -3,7 +3,14 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes');
 
-const configSitio = require('./config')
+const configSitio = require('./config');
+
+const db = require('./config/database');
+
+//revisando si se conecta con exito la DB
+db.authenticate()
+    .then(() => console.log('Database connected') )
+    .catch( error => console.log(error));
 
 //configuramos express
 const app = express();
