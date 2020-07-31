@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 
 
 module.exports = new Sequelize('alfajores', 'root', '', {
-    host: '27.0.0.1',
+    host: '127.0.0.1',
     port: '3308',
     dialect: 'mysql',
     define: {
