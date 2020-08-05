@@ -1,0 +1,13 @@
+extends ../layout/index
+block contenido
+    main.container.mt-5
+        h1.text-center.mb-5 #{pagina}
+        .row.nuestros-productos
+            each producto in productos
+                .col-md6.col-lg-4.mb-4
+                    .card
+                        img(src=`img/`, class="img-fluid")
+                        .card-body
+                            h2= producto.nombre
+                            p
+                                i.fas.fa-calendar-alt
