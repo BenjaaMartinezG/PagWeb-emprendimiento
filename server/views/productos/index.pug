@@ -4,10 +4,15 @@ block contenido
         h1.text-center.mb-5 #{pagina}
         .row.nuestros-productos
             each producto in productos
-                .col-md6.col-lg-4.mb-4
+                .col-md-6.col-lg-4.mb-4
                     .card
                         img(src=`img/`, class="img-fluid")
                         .card-body
-                            h2= producto.nombre
+                            h2= producto.nombre                                                           
                             p
-                                i.fas.fa-calendar-alt
+                                i.fas.fa-dollar-sign
+                                |  #{producto.precio}
+                            p= producto.descripcion
+                            a(href=`productos/${producto.id}`, class="btn btn-success btn-block") Mas Informacion
+                                
+                                

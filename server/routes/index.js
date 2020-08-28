@@ -24,5 +24,15 @@ module.exports = function() {
             .catch(e => console.log(e))
     });
 
+
+
+    router.get('/productos/:id', (req, res) => {
+        product.findByPk(req.params.id)
+            .then(producto => res.render('producto', {
+                producto
+            }))
+            .catch(error => console.log(error));
+    });
+
     return router;
 }
